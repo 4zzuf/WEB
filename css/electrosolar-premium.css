@@ -1,0 +1,313 @@
+/* ===== ESTILO INDUSTRIAL PREMIUM ELECTROSOLAR ===== */
+
+:root {
+    --vino: #5d0721;
+    --vino-profundo: #3b0415;
+    --vino-claro: #7a0a2a;
+    --dorado-solar: #d4a017;
+    --dorado-brillante: #ffd700;
+    --negro-industrial: #151515;
+    --gris-carbon: #2b2b2b;
+    --blanco-calido: #f7f3ea;
+    --texto-suave: #e9e1d2;
+}
+
+/* Fondo general */
+body {
+    background: #f4f1ea;
+}
+
+/* HEADER PREMIUM */
+.main-header.top {
+    background: linear-gradient(
+        to bottom,
+        rgba(93, 7, 33, 0.98) 0%,
+        rgba(93, 7, 33, 0.88) 55%,
+        rgba(93, 7, 33, 0.18) 100%
+    ) !important;
+}
+
+.main-header.scrolled {
+    background: linear-gradient(135deg, var(--vino-profundo), var(--vino), var(--vino-claro)) !important;
+    border-bottom: 4px solid var(--dorado-solar);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.28);
+}
+
+.header-unificado {
+    max-width: 1280px;
+}
+
+.brand-text h1 {
+    font-size: 1.55em;
+    letter-spacing: 1.4px;
+}
+
+.brand-text span {
+    color: var(--dorado-brillante);
+    font-size: 0.72em;
+}
+
+/* NAV */
+nav a {
+    font-size: 0.82em;
+    letter-spacing: 1.8px;
+    border-radius: 0 !important;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    bottom: 4px;
+    height: 2px;
+    background: var(--dorado-brillante);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* HERO */
+.hero-container {
+    min-height: 760px;
+    padding-top: 160px;
+}
+
+.video-background {
+    filter: brightness(0.46) contrast(1.15) saturate(0.9);
+}
+
+.hero-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(59,4,21,0.86) 0%, rgba(93,7,33,0.58) 42%, rgba(0,0,0,0.20) 100%),
+        linear-gradient(0deg, rgba(0,0,0,0.48), transparent 45%);
+    z-index: 0;
+}
+
+.hero-text {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    max-width: 980px;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: auto;
+    padding: 40px 20px;
+}
+
+.hero-text h2 {
+    font-size: clamp(2.8rem, 5vw, 5.5rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    max-width: 920px;
+    color: #ffffff !important;
+}
+
+.hero-text h2::before {
+    content: "ENERGÍA SOLAR PARA EMPRESAS";
+    display: block;
+    color: var(--dorado-brillante);
+    font-size: 0.18em;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+    font-weight: 900;
+}
+
+.hero-text p {
+    color: var(--texto-suave) !important;
+    font-size: 1.25rem !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    max-width: 700px;
+    margin-bottom: 28px !important;
+}
+
+/* BOTÓN HERO */
+.btn-cta-hero {
+    background: linear-gradient(135deg, var(--dorado-solar), var(--dorado-brillante)) !important;
+    color: var(--vino-profundo) !important;
+    border-radius: 0 !important;
+    padding: 18px 34px !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 1.2px !important;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.28) !important;
+    border: 2px solid var(--dorado-brillante) !important;
+    text-decoration: none !important;
+}
+
+.btn-cta-hero:hover {
+    background: transparent !important;
+    color: var(--dorado-brillante) !important;
+    transform: translateY(-3px);
+}
+
+.btn-cta-hero i {
+    color: inherit !important;
+}
+
+/* BANDA DE SERVICIOS */
+.hero-container + .propuesta-valor::before {
+    content: "SISTEMAS FOTOVOLTAICOS  ·  MANTENIMIENTO  ·  BOMBEO SOLAR  ·  INGENIERÍA ELÉCTRICA  ·  SOPORTE EN CUSCO";
+    position: absolute;
+    top: -74px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1180px, 92%);
+    background: linear-gradient(135deg, var(--vino-profundo), var(--vino));
+    color: white;
+    border-bottom: 5px solid var(--dorado-brillante);
+    padding: 24px 30px;
+    text-align: center;
+    z-index: 20;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 1.4px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+}
+
+/* PROPUESTA DE VALOR */
+.propuesta-valor {
+    background: var(--vino-profundo) !important;
+    padding-top: 130px !important;
+}
+
+.propuesta-valor h2 {
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    color: var(--dorado-brillante) !important;
+}
+
+.propuesta-valor h2::after {
+    content: "";
+    display: block;
+    width: 95px;
+    height: 5px;
+    background: var(--dorado-brillante);
+    margin-top: 18px;
+}
+
+.cards-flex-container {
+    margin-top: 35px;
+}
+
+.propuesta-valor .card-b2b {
+    border-radius: 0 !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
+    border-top: 5px solid var(--dorado-brillante) !important;
+    border-left: none !important;
+    background: rgba(21, 21, 21, 0.84) !important;
+    text-align: left !important;
+}
+
+.propuesta-valor .card-b2b:hover {
+    background: rgba(93, 7, 33, 0.94) !important;
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(0,0,0,0.28);
+}
+
+.propuesta-valor .card-b2b i {
+    color: var(--dorado-brillante) !important;
+}
+
+.propuesta-valor .card-b2b h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--dorado-brillante) !important;
+}
+
+/* SECCIÓN DE AHORRO */
+section[style*="background-color: #5d0721"] {
+    background: linear-gradient(135deg, var(--vino-profundo) 0%, var(--vino) 52%, var(--negro-industrial) 100%) !important;
+    border-top: 5px solid var(--dorado-brillante);
+    border-bottom: 5px solid var(--dorado-brillante);
+}
+
+section[style*="background-color: #5d0721"] h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* CONTACTO */
+#contacto {
+    background: var(--blanco-calido) !important;
+}
+
+#contacto h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--vino) !important;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(135deg, var(--vino-profundo), #111) !important;
+    border-top: 5px solid var(--dorado-brillante) !important;
+    color: #d0d0d0 !important;
+    padding: 34px 5% !important;
+}
+
+/* RESPONSIVE DEL ESTILO PREMIUM */
+@media (max-width: 768px) {
+    .hero-container {
+        min-height: 680px;
+        padding-top: 60px;
+    }
+
+    .hero-text {
+        text-align: center;
+        margin: 0 auto;
+        padding: 30px 18px;
+    }
+
+    .hero-text h2 {
+        font-size: 2.25rem !important;
+    }
+
+    .hero-text h2::before {
+        font-size: 0.28em;
+        letter-spacing: 2px;
+    }
+
+    .hero-text p {
+        font-size: 1rem !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-container + .propuesta-valor::before {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        display: block;
+        width: 100%;
+        font-size: 0.75rem;
+        line-height: 1.8;
+        padding: 20px 18px;
+        margin-bottom: 30px;
+    }
+
+    .propuesta-valor {
+        padding-top: 50px !important;
+    }
+
+    .propuesta-valor h2,
+    .propuesta-valor p {
+        text-align: center;
+    }
+
+    .propuesta-valor h2::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Electrosolar Ingenieros Cusco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos específicos para la página nosotros */
+        .nosotros-container {
+            padding-top: 200px;
+            padding-bottom: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .nosotros-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .nosotros-header h1 {
+            font-size: 3rem;
+            color: var(--guinda);
+            margin-bottom: 15px;
+        }
+
+        .nosotros-header h1 span {
+            color: var(--dorado);
+        }
+
+        .nosotros-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .mision-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--sombra);
+            transition: var(--transicion);
+            border: 1px solid var(--gris-borde);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--dorado);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--guinda), #7a0a2a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .card h2 {
+            text-align: center;
+            color: var(--guinda);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--dorado);
+            padding-bottom: 15px;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .valores-section {
+            background: linear-gradient(135deg, #f9f9f9, #fff);
+            padding: 60px 0;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .valores-section h2 {
+            text-align: center;
+            color: var(--guinda);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .valores-section h2 span {
+            color: var(--dorado);
+        }
+
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .valor-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--sombra);
+            transition: var(--transicion);
+            border: 1px solid transparent;
+        }
+
+        .valor-item:hover {
+            border-color: var(--dorado);
+            transform: translateY(-5px);
+        }
+
+        .valor-item i {
+            font-size: 2.5rem;
+            color: var(--dorado);
+            margin-bottom: 15px;
+        }
+
+        .valor-item h3 {
+            color: var(--guinda);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .valor-item p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .historia-section {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--sombra);
+            margin-bottom: 60px;
+        }
+
+        .historia-section h2 {
+            color: var(--guinda);
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .historia-section h2 span {
+            color: var(--dorado);
+        }
+
+        .historia-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .historia-texto p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .historia-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #f5f5f5, #fff);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--guinda);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .equipo-section {
+            margin-bottom: 60px;
+        }
+
+        .equipo-section h2 {
+            text-align: center;
+            color: var(--guinda);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .equipo-section h2 span {
+            color: var(--dorado);
+        }
+
+        .equipo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .equipo-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            transition: var(--transicion);
+        }
+
+        .equipo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .equipo-img {
+            height: 250px;
+            background: linear-gradient(135deg, var(--guinda), #7a0a2a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .equipo-img i {
+            font-size: 5rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .equipo-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .equipo-info h3 {
+            color: var(--guinda);
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .equipo-info .cargo {
+            color: var(--dorado);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .equipo-info p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .btn-volver {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--guinda), #7a0a2a);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transicion);
+            margin: 40px 0;
+        }
+
+        .btn-volver:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(93, 7, 33, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .mision-vision-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .historia-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .historia-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .nosotros-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .card h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER (mismo que index.html) -->
+    <header class="main-header top" id="mainHeader">
+        <div class="header-unificado">
+            <div class="header-izquierda">
+                <div class="direccion-header">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Calle Lima 506, San Jerónimo - Cusco</span>
+                </div>
+                <div class="telefonos-header">
+                    <a href="tel:901128587" class="telefono-link">901 128 587</a>
+                    <a href="tel:934724576" class="telefono-link">934 724 576</a>
+                </div>
+            </div>
+
+            <div class="header-centro">
+                <video autoplay muted loop playsinline class="logo-img">
+                    <source src="videos/video.webm" type="video/webm">
+                </video>
+                <div class="brand-text">
+                    <h1>ELECTROSOLAR INGENIEROS</h1>
+                    <span>SOPORTE TÉCNICO ESPECIALIZADO UNI</span>
+                </div>
+            </div>
+
+            <a href="https://wa.me/51934724576" class="btn-whatsapp-header">
+                <i class="fab fa-whatsapp"></i> COTIZAR AHORA
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#inicio">INICIO</a></li>
+                <li><a href="nosotros.html" class="active">NOSOTROS</a></li>
+                <li><a href="index.html#catalogo">CATÁLOGO</a></li>
+                <li><a href="index.html#protector">PROTECTOR</a></li>
+                <li><a href="index.html#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO DE NOSOTROS -->
+    <div class="nosotros-container">
+        <div class="nosotros-header">
+            <h1>SOBRE <span>NOSOTROS</span></h1>
+            <p>Ingeniería de la Universidad Nacional de Ingeniería al servicio de tu hogar y empresa</p>
+        </div>
+
+        <!-- MISIÓN Y VISIÓN -->
+        <div class="mision-vision-grid">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h2>MISIÓN</h2>
+                <p>Proporcionar soluciones energéticas sostenibles de alta calidad, respaldadas por la excelencia técnica de la Universidad Nacional de Ingeniería, mejorando la calidad de vida de nuestras comunidades y contribuyendo al desarrollo sostenible de la región Cusco.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h2>VISIÓN</h2>
+                <p>Ser la empresa líder en energía solar fotovoltaica en el sur del Perú, reconocida por nuestra innovación tecnológica, calidad de servicio y compromiso con el medio ambiente, llevando energía limpia y confiable a cada hogar y empresa.</p>
+            </div>
+        </div>
+
+        <!-- VALORES -->
+        <div class="valores-section">
+            <h2>NUESTROS <span>VALORES</span></h2>
+            <div class="valores-grid">
+                <div class="valor-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Excelencia UNI</h3>
+                    <p>Estándares de calidad universitaria en cada proyecto</p>
+                </div>
+                <div class="valor-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Compromiso</h3>
+                    <p>Dedicación total con nuestros clientes y sus necesidades</p>
+                </div>
+                <div class="valor-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sostenibilidad</h3>
+                    <p>Comprometidos con el medio ambiente y energías limpias</p>
+                </div>
+                <div class="valor-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Integridad</h3>
+                    <p>Transparencia y honestidad en cada servicio</p>
+                </div>
+                <div class="valor-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Trabajo en equipo</h3>
+                    <p>Colaboración multidisciplinaria para mejores resultados</p>
+                </div>
+                <div class="valor-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovación</h3>
+                    <p>Actualización constante en tecnologías solares</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HISTORIA -->
+        <div class="historia-section">
+            <h2>NUESTRA <span>HISTORIA</span></h2>
+            <div class="historia-content">
+                <div class="historia-texto">
+                    <p>Fundada por ingenieros egresados de la Universidad Nacional de Ingeniería (UNI), Electrosolar Ingenieros nace con la misión de democratizar el acceso a la energía solar fotovoltaica en la región Cusco.</p>
+                    <p>Desde 2020, hemos instalado más de 500 sistemas solares, desde pequeñas instalaciones residenciales hasta complejos sistemas industriales, siempre manteniendo los más altos estándares de calidad y seguridad.</p>
+                    <p>Nuestro equipo está conformado por especialistas en energía renovable, electricidad y electrónica, garantizando soluciones integrales y personalizadas para cada cliente.</p>
+                </div>
+                <div class="historia-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Proyectos realizados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Años de experiencia</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Clientes satisfechos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Soporte técnico</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EQUIPO -->
+        <div class="equipo-section">
+            <h2>NUESTRO <span>EQUIPO</span></h2>
+            <div class="equipo-grid">
+                <div class="equipo-card">
+                    <div class="equipo-img">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="equipo-info">
+                        <h3>Ing. Juan Pérez</h3>
+                        <div class="cargo">Director de Proyectos - UNI</div>
+                        <p>Especialista en sistemas fotovoltaicos con 10 años de experiencia</p>
+                    </div>
+                </div>
+                <div class="equipo-card">
+                    <div class="equipo-img">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="equipo-info">
+                        <h3>Ing. María López</h3>
+                        <div class="cargo">Jefa de Ingeniería - UNI</div>
+                        <p>Diseño y optimización de sistemas solares</p>
+                    </div>
+                </div>
+                <div class="equipo-card">
+                    <div class="equipo-img">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <div class="equipo-info">
+                        <h3>Ing. Carlos Sánchez</h3>
+                        <div class="cargo">Soporte Técnico - UNI</div>
+                        <p>Especialista en instalación y mantenimiento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTÓN VOLVER -->
+        <div style="text-align: center;">
+            <a href="index.html" class="btn-volver">
+                <i class="fas fa-arrow-left"></i> VOLVER AL INICIO
+            </a>
+        </div>
+    </div>
+
+    <!-- FOOTER (mismo que index.html) -->
+    <footer>
+        <p>ELECTROSOLAR INGENIEROS © 2026 - "Llevando la chispita a tu hogar"</p>
+    </footer>
+
+    <!-- SCRIPT para el efecto scroll (mismo que index.html) -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 80) {
+                header.classList.remove('top');
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+                header.classList.add('top');
+            }
+        });
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+</body>
+</html>
