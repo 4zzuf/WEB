@@ -12,6 +12,7 @@ const entries = [
   "nosotros.html",
   "css/electrosolar-redesign.css",
   "css/style.css",
+  "images",
   "js/main.js",
   "videos/video.webm"
 ];
