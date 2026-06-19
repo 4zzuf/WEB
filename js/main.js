@@ -69,7 +69,7 @@ function updateLossEstimate() {
     lossLow.textContent = lowText;
     lossHigh.textContent = highText;
     lossMessage.textContent = 'Si pagas ' + billText + ' al mes, una oportunidad del 8% al 20% equivale a ' + lowText + ' - ' + highText + ' mensuales.';
-    calculatorWhatsapp.href = 'https://wa.me/51934724576?text=' + encodeURIComponent('Hola, pago aproximadamente ' + billText + ' al mes de luz y quiero saber si estoy pagando de más. Puedo enviar mi recibo para revisión.');
+    calculatorWhatsapp.href = 'https://wa.me/51934724576?text=' + encodeURIComponent('Hola, pago aproximadamente ' + billText + ' al mes de luz y quiero revisar posibles sobrecostos. Puedo enviar mi recibo para revisión.');
 }
 
 if (billAmount) {

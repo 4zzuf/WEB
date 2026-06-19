@@ -344,6 +344,65 @@ iframe {
     font-size: 0.94rem;
 }
 
+.audience-choice {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.audience-route {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 5px 14px;
+    padding: 16px 0;
+    color: inherit;
+    text-decoration: none;
+    border-top: 1px solid var(--line);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.audience-route:first-child {
+    border-top: 0;
+}
+
+.audience-route i {
+    grid-row: span 2;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    background: var(--ink);
+}
+
+.audience-route.primary i {
+    background: var(--wine);
+}
+
+.audience-route strong,
+.audience-route span {
+    display: block;
+}
+
+.audience-route strong {
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.audience-route span {
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+
+.audience-route:hover {
+    transform: translateX(4px);
+}
+
+.audience-route:hover strong {
+    color: var(--wine);
+}
+
 .panel-link,
 .package-card a,
 .product-card a {
