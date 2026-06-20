@@ -1,0 +1,189 @@
+GUIA DE EDICION - ELECTROSOLAR WEB
+==================================
+
+Esta guia indica donde cambiar textos, nombres, fotos, imagenes y enlaces
+principales del sitio.
+
+ARCHIVOS PRINCIPALES
+--------------------
+- Home principal: index.html
+- Estilos visuales y animaciones: css/electrosolar-redesign.css
+- Interacciones y calculadoras: js/main.js
+- Build para Sites: scripts/build-sites.mjs
+- Imagenes del sitio: images/
+
+IMPORTANTE
+----------
+- No edites dist/ directamente. dist/ se regenera con el build.
+- Si agregas imagenes nuevas al sitio, ponlas dentro de images/. El build ya
+  copia la carpeta images completa.
+- Si cambias textos en index.html, revisa que los botones de WhatsApp sigan
+  teniendo mensajes correctos.
+
+SECCION NOSOTROS / EQUIPO
+-------------------------
+Ubicacion en index.html:
+- Buscar: <section id="nosotros" class="section about-section">
+
+Texto general de Nosotros:
+- Cambiar el titulo dentro de:
+  <div class="about-copy reveal-right">
+- Cambiar los parrafos debajo del titulo en esa misma zona.
+
+Pilares Diagnostico / Ingenieria / Ejecucion:
+- Buscar: <div class="about-board reveal-right">
+- Cada bloque esta dentro de un <article>.
+
+Equipo de 12 integrantes:
+- Buscar: <div class="team-grid">
+- Cada integrante tiene esta forma:
+  <article class="team-member">
+      <div class="team-photo">AB</div>
+      <div><strong>Ana Beltran</strong><span>Coordinacion tecnica</span></div>
+  </article>
+
+Para cambiar nombre:
+- Cambia el texto dentro de <strong>Nombre Apellido</strong>.
+
+Para cambiar cargo:
+- Cambia el texto dentro de <span>Cargo o area</span>.
+
+Para cambiar iniciales:
+- Cambia el texto dentro de <div class="team-photo">AB</div>.
+
+Para poner foto real:
+1. Crea una carpeta: images/team/
+2. Guarda la foto, por ejemplo: images/team/ana-beltran.jpg
+3. Reemplaza:
+   <div class="team-photo">AB</div>
+   por:
+   <div class="team-photo"><img src="images/team/ana-beltran.jpg" alt="Ana Beltran"></div>
+
+IMAGENES DE EVIDENCIA
+---------------------
+Ubicacion en index.html:
+- Buscar: <section id="evidencias" class="section evidence-section">
+
+Imagenes actuales de prueba:
+- images/evidence-measurement.png
+- images/evidence-audit.png
+- images/evidence-solar.png
+
+Para reemplazarlas:
+- Guarda una nueva imagen con el mismo nombre y reemplaza el archivo.
+- O cambia el src="" en cada <img>.
+
+Textos debajo de cada imagen:
+- Estan dentro de <figcaption>.
+- Cambiar <strong>...</strong> para el titulo.
+- Cambiar <small>...</small> para la descripcion.
+
+QUIZ DIAGNOSTICO
+----------------
+Ubicacion en index.html:
+- Buscar: <section id="quiz" class="section quiz-section">
+
+Campos del quiz:
+- Tipo de operacion: <select id="quizBusiness">
+- Recibo mensual: <input id="quizBill">
+- Distrito / zona: <input id="quizDistrict">
+- Horario: <select id="quizSchedule">
+- Equipos principales: <input id="quizLoads">
+
+Logica del mensaje de WhatsApp:
+- Archivo: js/main.js
+- Buscar: function updateQuizMessage()
+
+Si quieres cambiar el texto que se envia por WhatsApp:
+- Edita la variable message dentro de updateQuizMessage().
+
+CALCULADORA DE SOBRECOSTOS
+--------------------------
+Ubicacion en index.html:
+- Buscar: <section id="diagnostico" class="section diagnostic-section">
+
+Logica:
+- Archivo: js/main.js
+- Buscar: function updateLossEstimate()
+
+Rangos actuales:
+- 8% conservador
+- 20% alto
+
+Para cambiar los porcentajes:
+- En js/main.js, cambiar:
+  const low = monthlyBill * 0.08;
+  const high = monthlyBill * 0.20;
+
+BOTONES WHATSAPP
+----------------
+Buscar en index.html:
+- https://wa.me/51934724576
+
+Numero actual:
+- 51934724576
+
+Para cambiar el numero:
+- Reemplaza 51934724576 por el nuevo numero con codigo de pais.
+
+Para cambiar mensajes:
+- Cambia el texto despues de ?text=
+- Recomendado: usar textos codificados con espacios como %20.
+
+ESTILO, MOVIMIENTO Y CARDS
+--------------------------
+Archivo:
+- css/electrosolar-redesign.css
+
+Zonas nuevas de estilo visual:
+- .hero-metrics
+- .team-panel
+- .team-grid
+- .team-member
+- .team-photo
+- @keyframes heroScan
+- @keyframes metricFloat
+- @keyframes signalBar
+
+Para hacer las cards menos o mas redondeadas:
+- Buscar reglas con border-radius: 8px;
+- Mantener valores bajos para que se vea tecnico/profesional.
+
+Para quitar animaciones:
+- Buscar @keyframes heroScan, metricFloat, signalBar.
+- Tambien existe soporte automatico para usuarios con "reduced motion".
+
+SECCIONES PRINCIPALES
+---------------------
+En index.html:
+- Hero: <section id="inicio" class="hero">
+- Empresas: <section id="empresas" class="section section-light">
+- Nosotros: <section id="nosotros" class="section about-section">
+- Calculadora: <section id="diagnostico" class="section diagnostic-section">
+- Quiz: <section id="quiz" class="section quiz-section">
+- Oferta inicial: <section id="oferta" class="section offer-section">
+- Auditoria: <section id="auditoria" class="section audit-section">
+- Entregables: <section id="entregables" class="section deliverables-section">
+- Criterio: <section id="criterio" class="section fit-section">
+- Evidencias: <section id="evidencias" class="section evidence-section">
+- Personas: <section id="personas" class="section section-people">
+- Paquetes: <section id="paquetes" class="section package-section">
+- Escenarios: <section id="escenarios" class="section scenario-section">
+- SEO local: <section id="seo-local" class="section local-section">
+- Catalogo: <section id="catalogo" class="section catalog-section">
+- FAQ: <section id="faq" class="section faq-section">
+- Contacto: <section id="contacto" class="section contact-section">
+
+PREVIEW / SITES
+---------------
+El sitio esta conectado a Sites mediante:
+- .openai/hosting.json
+
+Build local:
+- Usar Node para ejecutar scripts/build-sites.mjs.
+- En este entorno Codex ya lo ejecuta con el Node empaquetado.
+
+La preview publicada actual usa el proyecto:
+- appgprj_6a357f30f700819189d97914de2353f3
+
+No cambiar project_id salvo que se cree un nuevo sitio Sites.
