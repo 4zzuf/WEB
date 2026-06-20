@@ -76,3 +76,33 @@ if (billAmount) {
     billAmount.addEventListener('input', updateLossEstimate);
     updateLossEstimate();
 }
+
+const quizBusiness = document.getElementById('quizBusiness');
+const quizBill = document.getElementById('quizBill');
+const quizDistrict = document.getElementById('quizDistrict');
+const quizSchedule = document.getElementById('quizSchedule');
+const quizLoads = document.getElementById('quizLoads');
+const quizPreview = document.getElementById('quizPreview');
+const quizWhatsapp = document.getElementById('quizWhatsapp');
+
+function updateQuizMessage() {
+    if (!quizBusiness || !quizBill || !quizDistrict || !quizSchedule || !quizLoads || !quizPreview || !quizWhatsapp) return;
+
+    const business = quizBusiness.value;
+    const bill = formatSoles(Math.max(Number(quizBill.value) || 0, 0));
+    const district = quizDistrict.value.trim() || 'por definir';
+    const schedule = quizSchedule.value;
+    const loads = quizLoads.value.trim() || 'por detallar';
+    const message = 'Hola, quiero una revisión energética. Tipo de operación: ' + business + '. Recibo aproximado: ' + bill + '. Distrito/zona: ' + district + '. Horario: ' + schedule + '. Equipos principales: ' + loads + '.';
+
+    quizPreview.textContent = message;
+    quizWhatsapp.href = 'https://wa.me/51934724576?text=' + encodeURIComponent(message);
+}
+
+[quizBusiness, quizBill, quizDistrict, quizSchedule, quizLoads].forEach(function (field) {
+    if (!field) return;
+    field.addEventListener('input', updateQuizMessage);
+    field.addEventListener('change', updateQuizMessage);
+});
+
+updateQuizMessage();

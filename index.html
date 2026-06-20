@@ -36,9 +36,9 @@
             <nav class="main-nav" id="mainNav">
                 <a href="#empresas">Empresas</a>
                 <a href="#auditoria">Auditoría</a>
+                <a href="#nosotros">Nosotros</a>
                 <a href="#evidencias">Evidencia</a>
-                <a href="#personas">Personas</a>
-                <a href="#catalogo">Catálogo</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contacto">Contacto</a>
             </nav>
 
@@ -196,6 +196,41 @@
             </div>
         </section>
 
+        <section id="nosotros" class="section about-section">
+            <div class="about-layout">
+                <div class="about-copy reveal-right">
+                    <span class="eyebrow dark">Nosotros</span>
+                    <h2>Un equipo técnico para decidir con datos, no con suposiciones.</h2>
+                    <p>
+                        Electrosolar Ingenieros trabaja desde Cusco con enfoque de ingeniería aplicada: entender la operación,
+                        medir donde haga falta, ordenar oportunidades y ejecutar soluciones que tengan sentido técnico y económico.
+                    </p>
+                    <p>
+                        La energía solar es una herramienta importante, pero no siempre es el primer paso. Antes revisamos consumo,
+                        contrato eléctrico, cargas, horarios, calidad de energía y condiciones reales de instalación.
+                    </p>
+                </div>
+
+                <div class="about-board reveal-right">
+                    <article>
+                        <strong>01</strong>
+                        <span>Diagnóstico</span>
+                        <p>Lectura de recibos, operación, cargas y señales de sobrecosto.</p>
+                    </article>
+                    <article>
+                        <strong>02</strong>
+                        <span>Ingeniería</span>
+                        <p>Dimensionamiento, medición, protecciones, calidad de energía y retorno.</p>
+                    </article>
+                    <article>
+                        <strong>03</strong>
+                        <span>Ejecución</span>
+                        <p>Instalación, puesta en marcha, mantenimiento y soporte técnico local.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section id="diagnostico" class="section diagnostic-section">
             <div class="diagnostic-layout">
                 <div class="diagnostic-copy reveal-right">
@@ -236,6 +271,66 @@
                     <a id="calculatorWhatsapp" class="btn-primary full" href="https://wa.me/51934724576?text=Hola,%20pago%20aproximadamente%20S/%202500%20al%20mes%20de%20luz%20y%20quiero%20revisar%20posibles%20sobrecostos.">
                         <i class="fa-brands fa-whatsapp"></i>
                         Revisar mi caso
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="section quiz-section">
+            <div class="section-heading">
+                <span>Diagnóstico guiado</span>
+                <h2>Convierte una consulta suelta en un lead con contexto.</h2>
+                <p>
+                    Este formulario arma un mensaje de WhatsApp con datos útiles para revisar el caso: tipo de negocio,
+                    recibo mensual, horario, distrito y equipos principales.
+                </p>
+            </div>
+
+            <div class="quiz-card reveal-right">
+                <div class="quiz-grid">
+                    <label>
+                        Tipo de operación
+                        <select id="quizBusiness">
+                            <option>Hotel u hospedaje</option>
+                            <option>Restaurante o cafetería</option>
+                            <option>Taller o planta</option>
+                            <option>Comercio</option>
+                            <option>Fundo o agro</option>
+                            <option>Vivienda / campo</option>
+                        </select>
+                    </label>
+                    <label>
+                        Recibo mensual aproximado
+                        <input id="quizBill" type="number" min="0" step="100" value="3500" inputmode="decimal">
+                    </label>
+                    <label>
+                        Distrito / zona
+                        <input id="quizDistrict" type="text" placeholder="Ej. San Jerónimo, Cusco, Urubamba">
+                    </label>
+                    <label>
+                        Horario de operación
+                        <select id="quizSchedule">
+                            <option>Principalmente diurno</option>
+                            <option>Diurno y nocturno</option>
+                            <option>Solo horario comercial</option>
+                            <option>Operación 24/7</option>
+                            <option>Variable / por temporadas</option>
+                        </select>
+                    </label>
+                    <label class="quiz-wide">
+                        Equipos principales
+                        <input id="quizLoads" type="text" placeholder="Ej. bombas, cámaras de frío, motores, luminarias, compresores">
+                    </label>
+                </div>
+
+                <div class="quiz-result">
+                    <div>
+                        <span>Mensaje sugerido</span>
+                        <p id="quizPreview">Hola, quiero una revisión energética. Tipo de operación: Hotel u hospedaje. Recibo aproximado: S/ 3,500. Horario: Principalmente diurno.</p>
+                    </div>
+                    <a id="quizWhatsapp" class="btn-primary full" href="https://wa.me/51934724576?text=Hola,%20quiero%20una%20revisi%C3%B3n%20energ%C3%A9tica.">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Enviar diagnóstico por WhatsApp
                     </a>
                 </div>
             </div>
@@ -309,6 +404,63 @@
                     <h3>Plan priorizado</h3>
                     <p>Acciones rápidas, proyectos por etapas, inversión estimada y siguiente paso recomendado.</p>
                 </article>
+            </div>
+        </section>
+
+        <section id="entregables" class="section deliverables-section">
+            <div class="section-heading">
+                <span>Entregables</span>
+                <h2>El cliente debe ver qué recibe, no solo qué prometemos.</h2>
+                <p>
+                    Estos son los documentos y salidas que luego podemos convertir en muestras reales, PDF descargables
+                    o capturas anonimizadas de trabajos hechos.
+                </p>
+            </div>
+
+            <div class="deliverables-grid">
+                <article class="deliverable-card reveal-right">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                    <h3>Informe de recibo</h3>
+                    <p>Lectura de tarifa, potencia, demanda, cargos y señales de sobrecosto.</p>
+                    <span>Salida: resumen ejecutivo + siguiente paso.</span>
+                </article>
+                <article class="deliverable-card reveal-right">
+                    <i class="fa-solid fa-wave-square"></i>
+                    <h3>Reporte de calidad</h3>
+                    <p>Factor de potencia, armónicos, picos, calentamientos y riesgos para equipos.</p>
+                    <span>Salida: hallazgos + recomendaciones.</span>
+                </article>
+                <article class="deliverable-card reveal-right">
+                    <i class="fa-solid fa-table-list"></i>
+                    <h3>Matriz de oportunidades</h3>
+                    <p>Acciones ordenadas por impacto, costo, urgencia y complejidad.</p>
+                    <span>Salida: prioridades por etapa.</span>
+                </article>
+                <article class="deliverable-card reveal-right">
+                    <i class="fa-solid fa-route"></i>
+                    <h3>Plan de ejecución</h3>
+                    <p>Qué corregir primero, qué medir, qué instalar y cuándo evaluar solar.</p>
+                    <span>Salida: hoja de ruta técnica-comercial.</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="criterio" class="section fit-section">
+            <div class="fit-layout">
+                <div class="fit-copy reveal-right">
+                    <span class="eyebrow">Criterio Electrosolar</span>
+                    <h2>No recomendamos paneles si antes no entendemos el consumo.</h2>
+                    <p>
+                        Si el problema está en demanda máxima, factor de potencia, motores, luminarias, contrato eléctrico
+                        o mala operación, vender paneles primero puede ser una mala decisión. La propuesta correcta sale
+                        del diagnóstico.
+                    </p>
+                </div>
+                <div class="fit-list reveal-right">
+                    <div><i class="fa-solid fa-check"></i><span>Sí trabajamos con empresas que quieren decidir con números.</span></div>
+                    <div><i class="fa-solid fa-check"></i><span>Sí revisamos consumo antes de dimensionar equipos.</span></div>
+                    <div><i class="fa-solid fa-xmark"></i><span>No vendemos soluciones genéricas sin leer la operación.</span></div>
+                </div>
             </div>
         </section>
 
@@ -422,36 +574,6 @@
             </div>
         </section>
 
-        <section id="autoridad" class="section authority-section">
-            <div class="authority-layout">
-                <div class="authority-copy reveal-right">
-                    <span class="eyebrow dark">Criterio técnico</span>
-                    <h2>Prestigio UNI aplicado a decisiones de ahorro reales.</h2>
-                    <p>
-                        En energía, una mala decisión se paga todos los meses. Electrosolar combina formación de ingeniería,
-                        trabajo local en Cusco y lectura económica del problema: medir, priorizar y ejecutar sin vender humo.
-                    </p>
-                </div>
-                <div class="translation-board reveal-right">
-                    <div>
-                        <small>Término técnico</small>
-                        <strong>Factor de potencia</strong>
-                        <span>Puede convertirse en penalidades y equipos trabajando mal.</span>
-                    </div>
-                    <div>
-                        <small>Término técnico</small>
-                        <strong>Armónicos</strong>
-                        <span>Pueden calentar cables, afectar equipos y generar fallas caras.</span>
-                    </div>
-                    <div>
-                        <small>Término técnico</small>
-                        <strong>Demanda maxima</strong>
-                        <span>Puede hacerte pagar por picos que si se pueden gestionar.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="escenarios" class="section scenario-section">
             <div class="section-heading">
                 <span>Escenarios frecuentes en Cusco</span>
@@ -491,6 +613,26 @@
                     <strong>Escenario tipo: bombeo, riego y continuidad operativa.</strong>
                     <small>Oportunidad: bombeo solar, autonomía y respaldo híbrido.</small>
                 </article>
+            </div>
+        </section>
+
+        <section id="seo-local" class="section local-section">
+            <div class="section-heading">
+                <span>Servicios en Cusco</span>
+                <h2>Ingeniería energética local para negocios que pagan demasiado por electricidad.</h2>
+                <p>
+                    Electrosolar atiende auditoría energética en Cusco, revisión de recibos eléctricos, calidad de energía,
+                    paneles solares para empresas, bombeo solar, termas solares, sistemas off-grid y mantenimiento técnico.
+                </p>
+            </div>
+
+            <div class="local-tags reveal-right">
+                <span>Auditoría energética Cusco</span>
+                <span>Calidad de energía y armónicos</span>
+                <span>Paneles solares para empresas</span>
+                <span>Bombeo solar Cusco</span>
+                <span>Revisión de contrato eléctrico</span>
+                <span>Sistemas off-grid para campo</span>
             </div>
         </section>
 
