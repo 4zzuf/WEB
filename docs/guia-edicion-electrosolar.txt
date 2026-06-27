@@ -6,7 +6,14 @@ principales del sitio.
 
 ARCHIVOS PRINCIPALES
 --------------------
-- Home principal: index.html
+- Home principal / landing de entrada: index.html
+- Empresas B2B: empresas.html
+- Auditoria y calculadora: auditoria.html
+- Personas y campo: personas-campo.html
+- Catalogo tecnico-comercial: catalogo.html
+- Evidencias y casos: evidencias.html
+- Preguntas frecuentes: faq.html
+- Nosotros / historia / equipo: nosotros.html
 - Estilos visuales y animaciones: css/electrosolar-redesign.css
 - Interacciones y calculadoras: js/main.js
 - Build para Sites: scripts/build-sites.mjs
@@ -17,25 +24,42 @@ IMPORTANTE
 - No edites dist/ directamente. dist/ se regenera con el build.
 - Si agregas imagenes nuevas al sitio, ponlas dentro de images/. El build ya
   copia la carpeta images completa.
-- Si cambias textos en index.html, revisa que los botones de WhatsApp sigan
+- Si cambias textos en cualquier pagina, revisa que los botones de WhatsApp sigan
   teniendo mensajes correctos.
+
+PAGINAS Y HEROES
+----------------
+Las subpaginas usan la misma estructura visual:
+- Buscar: <section class="page-hero">
+- El titulo principal esta en: <h1>...</h1>
+- La bajada comercial esta en el parrafo debajo del h1.
+- Los botones estan en: <div class="page-hero-actions">
+- El panel visual derecho esta en: <aside class="page-hero-visual">
+
+Si quieres cambiar el mensaje principal de una pagina, edita primero su h1 y
+el parrafo del hero. Ese texto es lo primero que vera el cliente.
 
 SECCION NOSOTROS / EQUIPO
 -------------------------
-Ubicacion en index.html:
-- Buscar: <section id="nosotros" class="section about-section">
+Ubicacion principal:
+- nosotros.html
+
+Resumen en home:
+- index.html, buscar: <section id="nosotros-summary"
 
 Texto general de Nosotros:
 - Cambiar el titulo dentro de:
-  <div class="about-copy reveal-right">
-- Cambiar los parrafos debajo del titulo en esa misma zona.
+  <div class="nosotros-header">
+- Historia: buscar <div class="historia-section">
+- Mision / Vision: buscar <div class="mision-vision-grid">
+- Valores: buscar <div class="valores-section">
 
 Pilares Diagnostico / Ingenieria / Ejecucion:
-- Buscar: <div class="about-board reveal-right">
+- En el resumen del home, buscar: <div class="about-board reveal-right">
 - Cada bloque esta dentro de un <article>.
 
 Equipo de 12 integrantes:
-- Buscar: <div class="team-grid">
+- En nosotros.html, buscar: <div class="team-grid">
 - Cada integrante tiene esta forma:
   <article class="team-member">
       <div class="team-photo">AB</div>
@@ -61,13 +85,18 @@ Para poner foto real:
 
 IMAGENES DE EVIDENCIA
 ---------------------
-Ubicacion en index.html:
+Ubicacion:
+- evidencias.html
 - Buscar: <section id="evidencias" class="section evidence-section">
 
 Imagenes actuales de prueba:
 - images/evidence-measurement.png
 - images/evidence-audit.png
 - images/evidence-solar.png
+
+Caso destacado:
+- Buscar: <div class="evidence-feature reveal-right">
+- Reemplaza la imagen, el h3, el parrafo y la lista por datos reales.
 
 Para reemplazarlas:
 - Guarda una nueva imagen con el mismo nombre y reemplaza el archivo.
@@ -80,7 +109,8 @@ Textos debajo de cada imagen:
 
 QUIZ DIAGNOSTICO
 ----------------
-Ubicacion en index.html:
+Ubicacion:
+- auditoria.html
 - Buscar: <section id="quiz" class="section quiz-section">
 
 Campos del quiz:
@@ -99,7 +129,8 @@ Si quieres cambiar el texto que se envia por WhatsApp:
 
 CALCULADORA DE SOBRECOSTOS
 --------------------------
-Ubicacion en index.html:
+Ubicacion:
+- auditoria.html
 - Buscar: <section id="diagnostico" class="section diagnostic-section">
 
 Logica:
@@ -117,7 +148,7 @@ Para cambiar los porcentajes:
 
 BOTONES WHATSAPP
 ----------------
-Buscar en index.html:
+Buscar en todos los .html:
 - https://wa.me/51934724576
 
 Numero actual:
@@ -137,6 +168,14 @@ Archivo:
 
 Zonas nuevas de estilo visual:
 - .hero-metrics
+- .page-hero
+- .page-hero-visual
+- .visual-stack
+- .pulse-readout
+- .case-section
+- .decision-section
+- .evidence-feature
+- .catalog-note
 - .team-panel
 - .team-grid
 - .team-member
@@ -144,6 +183,8 @@ Zonas nuevas de estilo visual:
 - @keyframes heroScan
 - @keyframes metricFloat
 - @keyframes signalBar
+- @keyframes signalBarWide
+- @keyframes slowSpin
 
 Para hacer las cards menos o mas redondeadas:
 - Buscar reglas con border-radius: 8px;
@@ -157,22 +198,30 @@ SECCIONES PRINCIPALES
 ---------------------
 En index.html:
 - Hero: <section id="inicio" class="hero">
-- Empresas: <section id="empresas" class="section section-light">
-- Nosotros: <section id="nosotros" class="section about-section">
-- Calculadora: <section id="diagnostico" class="section diagnostic-section">
-- Quiz: <section id="quiz" class="section quiz-section">
-- Oferta inicial: <section id="oferta" class="section offer-section">
-- Auditoria: <section id="auditoria" class="section audit-section">
-- Entregables: <section id="entregables" class="section deliverables-section">
-- Criterio: <section id="criterio" class="section fit-section">
-- Evidencias: <section id="evidencias" class="section evidence-section">
-- Personas: <section id="personas" class="section section-people">
-- Paquetes: <section id="paquetes" class="section package-section">
-- Escenarios: <section id="escenarios" class="section scenario-section">
-- SEO local: <section id="seo-local" class="section local-section">
-- Catalogo: <section id="catalogo" class="section catalog-section">
-- FAQ: <section id="faq" class="section faq-section">
+- Rutas principales: <section class="route-strip"
+- Resumen Empresas: <section id="empresas-summary"
+- Resumen Auditoria: <section id="auditoria-summary"
+- Resumen Nosotros: <section id="nosotros-summary"
+- Resumen Personas: <section id="personas-summary"
+- Resumen Evidencias: <section id="evidencias-summary"
+- Resumen FAQ: <section id="faq-summary"
 - Contacto: <section id="contacto" class="section contact-section">
+
+En empresas.html:
+- Servicios: <section id="empresas"
+- Caso tipo: <section id="caso-empresa"
+- Traduccion tecnica a decision: <section class="section decision-section">
+
+En auditoria.html:
+- Calculadora: <section id="diagnostico"
+- Quiz: <section id="quiz"
+- Oferta inicial: <section id="oferta"
+- Proceso de auditoria: <section id="auditoria"
+- Entregables: <section id="entregables"
+
+En catalogo.html:
+- Productos: <section id="catalogo"
+- Nota ERPNext / stock: <div class="catalog-note">
 
 PREVIEW / SITES
 ---------------

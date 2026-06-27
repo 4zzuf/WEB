@@ -10,8 +10,13 @@ const serverDir = path.join(dist, "server");
 const entries = [
   "index.html",
   "nosotros.html",
+  "empresas.html",
+  "auditoria.html",
+  "personas-campo.html",
+  "catalogo.html",
+  "evidencias.html",
+  "faq.html",
   "css/electrosolar-redesign.css",
-  "css/style.css",
   "images",
   "js/main.js",
   "videos/video.webm"

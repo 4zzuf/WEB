@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditoría Energética | Electrosolar Ingenieros Cusco</title>
+    <meta name="description" content="Calcula potenciales sobrecostos y conoce nuestro proceso de auditoría energética en Cusco. Diagnóstico documental, levantamiento y plan de ahorro.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/electrosolar-redesign.css?v=11">
+</head>
+<body>
+    <header class="site-header top" id="mainHeader">
+        <div class="header-contact">
+            <span><i class="fa-solid fa-location-dot"></i> Cusco | Calle Lima 506, San Jerónimo</span>
+            <div class="contact-links">
+                <a href="tel:901128587">901 128 587</a>
+                <a href="tel:934724576">934 724 576</a>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <a href="index.html" class="brand">
+                <video autoplay muted loop playsinline class="brand-logo">
+                    <source src="videos/video.webm" type="video/webm">
+                </video>
+                <span>
+                    <strong>Electrosolar Ingenieros</strong>
+                    <small>Ingeniería energética UNI en Cusco</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Inicio</a>
+                <a href="empresas.html">Empresas</a>
+                <a href="auditoria.html" class="active">Auditoría</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="personas-campo.html">Personas y Campo</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="evidencias.html">Evidencia</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+
+            <a class="header-cta" href="https://wa.me/51934724576?text=Hola,%20quiero%20enviar%20mi%20recibo%20de%20luz%20para%20revisar%20posibles%20sobrecostos">
+                <i class="fa-brands fa-whatsapp"></i>
+                Enviar recibo
+            </a>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero">
+            <div class="page-hero-inner">
+                <div class="page-hero-copy reveal-right">
+                    <span class="eyebrow">Auditoría energética</span>
+                    <h1>Tu recibo eléctrico puede estar contando una fuga de margen.</h1>
+                    <p>
+                        El primer paso no es cotizar equipos: es leer tarifa, demanda, penalidades, horarios y
+                        cargas principales para saber si conviene contrato, medición, eficiencia, solar o mantenimiento.
+                    </p>
+                    <div class="page-hero-actions">
+                        <a class="btn-primary" href="#diagnostico">
+                            <i class="fa-solid fa-calculator"></i>
+                            Calcular oportunidad
+                        </a>
+                        <a class="btn-secondary" href="#oferta">
+                            Qué debo enviar
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="page-hero-visual reveal-right">
+                    <div>
+                        <span class="visual-kicker">Primer filtro</span>
+                        <strong class="visual-title">De recibo confuso a decisión clara.</strong>
+                    </div>
+                    <div class="visual-stack">
+                        <div>
+                            <i class="fa-solid fa-receipt"></i>
+                            <span><strong>Lectura</strong><small>cargos, potencia y demanda</small></span>
+                            <em>24 h</em>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            <span><strong>Señales</strong><small>picos, reactiva y consumo base</small></span>
+                            <em>PDF</em>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-list-check"></i>
+                            <span><strong>Siguiente paso</strong><small>auditar, corregir o dimensionar</small></span>
+                            <em>ruta</em>
+                        </div>
+                    </div>
+                    <div class="pulse-readout">
+                        <strong>Sin vender a ciegas</strong>
+                        <span>la recomendación nace del diagnóstico.</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- CALCULADORA -->
+        <section id="diagnostico" class="section diagnostic-section">
+            <div class="diagnostic-layout">
+                <div class="diagnostic-copy reveal-right">
+                    <span class="eyebrow">Calculadora rápida</span>
+                    <h2>¿Cuánta oportunidad de ahorro podría existir?</h2>
+                    <p>
+                        Esta estimación no reemplaza una medición. Sirve para abrir los ojos: en empresas con contratos
+                        mal ajustados, cargas ineficientes o mala calidad de energía, el sobrecosto mensual puede ser relevante.
+                    </p>
+                    <div class="diagnostic-proof">
+                        <div><strong>8% - 20%</strong><span>rango preliminar de oportunidad</span></div>
+                        <div><strong>24 h</strong><span>para revisar tu recibo inicial</span></div>
+                    </div>
+                </div>
+
+                <div class="calculator reveal-right">
+                    <label for="billAmount">Pago mensual aproximado a la distribuidora</label>
+                    <div class="input-row">
+                        <span>S/</span>
+                        <input id="billAmount" type="number" min="0" step="50" value="2500" inputmode="decimal">
+                    </div>
+
+                    <div class="range-grid">
+                        <div>
+                            <span>Oportunidad conservadora</span>
+                            <strong id="lossLow">S/ 200</strong>
+                        </div>
+                        <div>
+                            <span>Oportunidad alta</span>
+                            <strong id="lossHigh">S/ 500</strong>
+                        </div>
+                    </div>
+
+                    <p id="lossMessage" class="loss-message">
+                        Si pagas S/ 2,500 al mes, una oportunidad del 8% al 20% equivale a S/ 200 - S/ 500 mensuales.
+                    </p>
+
+                    <a id="calculatorWhatsapp" class="btn-primary full" href="https://wa.me/51934724576?text=Hola,%20pago%20aproximadamente%20S/%202500%20al%20mes%20de%20luz%20y%20quiero%20revisar%20posibles%20sobrecostos.">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Revisar mi caso
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section decision-section">
+            <div class="decision-layout">
+                <div class="decision-copy reveal-right">
+                    <span class="eyebrow dark">Qué buscamos</span>
+                    <h2>Señales que convierten un recibo alto en acciones concretas.</h2>
+                    <p>
+                        La revisión inicial separa lo que es consumo normal de lo que puede ser sobrecosto,
+                        riesgo técnico o una inversión mal priorizada.
+                    </p>
+                </div>
+
+                <div class="decision-board reveal-right">
+                    <div class="decision-card">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span><strong>Demanda máxima</strong><span>picos que pueden elevar el costo aunque el consumo total no parezca alto.</span></span>
+                    </div>
+                    <div class="decision-card">
+                        <i class="fa-solid fa-wave-square"></i>
+                        <span><strong>Calidad de energía</strong><span>reactiva, armónicos y señales que castigan equipos o recibo.</span></span>
+                    </div>
+                    <div class="decision-card">
+                        <i class="fa-solid fa-solar-panel"></i>
+                        <span><strong>Potencial solar real</strong><span>solo cuando la curva de consumo y el techo justifican la inversión.</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ -->
+        <section id="quiz" class="section quiz-section">
+            <div class="section-heading">
+                <span>Diagnóstico guiado</span>
+                <h2>Convierte una consulta suelta en un lead con contexto.</h2>
+                <p>
+                    Este formulario arma un mensaje de WhatsApp con datos útiles para revisar el caso: tipo de negocio,
+                    recibo mensual, horario, distrito y equipos principales.
+                </p>
+            </div>
+
+            <div class="quiz-card reveal-right">
+                <div class="quiz-grid">
+                    <label>
+                        Tipo de operación
+                        <select id="quizBusiness">
+                            <option>Hotel u hospedaje</option>
+                            <option>Restaurante o cafetería</option>
+                            <option>Taller o planta</option>
+                            <option>Comercio</option>
+                            <option>Fundo o agro</option>
+                            <option>Vivienda / campo</option>
+                        </select>
+                    </label>
+                    <label>
+                        Recibo mensual aproximado
+                        <input id="quizBill" type="number" min="0" step="100" value="3500" inputmode="decimal">
+                    </label>
+                    <label>
+                        Distrito / zona
+                        <input id="quizDistrict" type="text" placeholder="Ej. San Jerónimo, Cusco, Urubamba">
+                    </label>
+                    <label>
+                        Horario de operación
+                        <select id="quizSchedule">
+                            <option>Principalmente diurno</option>
+                            <option>Diurno y nocturno</option>
+                            <option>Solo horario comercial</option>
+                            <option>Operación 24/7</option>
+                            <option>Variable / por temporadas</option>
+                        </select>
+                    </label>
+                    <label class="quiz-wide">
+                        Equipos principales
+                        <input id="quizLoads" type="text" placeholder="Ej. bombas, cámaras de frío, motores, luminarias, compresores">
+                    </label>
+                </div>
+
+                <div class="quiz-result">
+                    <div>
+                        <span>Mensaje sugerido</span>
+                        <p id="quizPreview">Hola, quiero una revisión energética. Tipo de operación: Hotel u hospedaje. Recibo aproximado: S/ 3,500. Horario: Principalmente diurno.</p>
+                    </div>
+                    <a id="quizWhatsapp" class="btn-primary full" href="https://wa.me/51934724576?text=Hola,%20quiero%20una%20revisi%C3%B3n%20energ%C3%A9tica.">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Enviar diagnóstico por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OFERTA INICIAL -->
+        <section id="oferta" class="section offer-section">
+            <div class="offer-layout">
+                <div class="offer-copy reveal-right">
+                    <span class="eyebrow dark">Oferta inicial</span>
+                    <h2>Revisión inicial de recibo eléctrico empresarial.</h2>
+                    <p>
+                        Un primer filtro para saber si tu empresa tiene señales de sobrecosto antes de invertir
+                        en equipos, paneles o cambios de instalación.
+                    </p>
+                </div>
+
+                <div class="offer-card reveal-right">
+                    <div class="offer-block">
+                        <strong>Nos envías</strong>
+                        <ul>
+                            <li>Último recibo de luz.</li>
+                            <li>Tipo de negocio y distrito.</li>
+                            <li>Horario normal de operación.</li>
+                            <li>Si tienes motores, bombas, cámaras de frío o equipos críticos.</li>
+                        </ul>
+                    </div>
+                    <div class="offer-block">
+                        <strong>Te devolvemos</strong>
+                        <ul>
+                            <li>Lectura de tarifa, potencia, demanda y cargos.</li>
+                            <li>Señales de penalidades, picos o consumo mal distribuido.</li>
+                            <li>Ruta recomendada: contrato, medición, eficiencia, solar o mantenimiento.</li>
+                        </ul>
+                    </div>
+                    <a class="btn-primary full" href="https://wa.me/51934724576?text=Hola,%20quiero%20una%20revisi%C3%B3n%20inicial%20de%20mi%20recibo.%20Mi%20empresa%20es:%20.%20Distrito:%20.%20Horario%20de%20operaci%C3%B3n:%20.">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Enviar datos iniciales
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AUDITORÍA -->
+        <section id="auditoria" class="section audit-section">
+            <div class="section-heading">
+                <span>Producto principal</span>
+                <h2>Auditoría energética empresarial: medir antes de comprar.</h2>
+                <p>
+                    La auditoría ordena el problema completo: recibo, contrato, calidad de energía, cargas,
+                    operación y proyectos posibles. El resultado no es una lista de equipos: es una ruta de ahorro.
+                </p>
+            </div>
+
+            <div class="audit-grid">
+                <article class="audit-step reveal-right">
+                    <span>01</span>
+                    <h3>Diagnóstico documental</h3>
+                    <p>Recibos, tarifa, potencia, demanda, cargos, historial y patrón de operación.</p>
+                </article>
+                <article class="audit-step reveal-right">
+                    <span>02</span>
+                    <h3>Levantamiento técnico</h3>
+                    <p>Tableros, motores, bombas, luminarias, cargas críticas, horarios y protecciones.</p>
+                </article>
+                <article class="audit-step reveal-right">
+                    <span>03</span>
+                    <h3>Medición y análisis</h3>
+                    <p>Calidad de energía, factor de potencia, armónicos, demanda y oportunidades de control.</p>
+                </article>
+                <article class="audit-step reveal-right">
+                    <span>04</span>
+                    <h3>Plan priorizado</h3>
+                    <p>Acciones rápidas, proyectos por etapas, inversión estimada y siguiente paso recomendado.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ENTREGABLES -->
+        <section id="entregables" class="section deliverables-section">
+            <div class="section-heading">
+                <span>Entregables</span>
+                <h2>El cliente debe ver qué recibe, no solo qué prometemos.</h2>
+                <p>
+                    Estos son los documentos y salidas que luego podemos convertir en muestras reales, PDF descargables
+                    o capturas anonimizadas de trabajos hechos.
+                </p>
+            </div>
+
+            <div class="deliverables-grid">
+                <article class="deliverable-card reveal-right">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                    <h3>Informe de recibo</h3>
+                    <p>Lectura de tarifa, potencia, demanda, cargos y señales de sobrecosto.</p>
+                    <span>Salida: resumen ejecutivo + siguiente paso.</span>
+                </article>
+                <article class="deliverable-card reveal-right">
+                    <i class="fa-solid fa-wave-square"></i>
+                    <h3>Reporte de calidad</h3>
+                    <p>Factor de potencia, armónicos, picos, calentamientos y riesgos para equipos.</p>
+                    <span>Salida: hallazgos + recomendaciones.</span>
+                </article>
+                <article class="deliverable-card reveal-right">
+                    <i class="fa-solid fa-table-list"></i>
+                    <h3>Matriz de oportunidades</h3>
+                    <p>Acciones ordenadas por impacto, costo, urgencia y complejidad.</p>
+                    <span>Salida: prioridades por etapa.</span>
+                </article>
+                <article class="deliverable-card reveal-right">
+                    <i class="fa-solid fa-route"></i>
+                    <h3>Plan de ejecución</h3>
+                    <p>Qué corregir primero, qué medir, qué instalar y cuándo evaluar solar.</p>
+                    <span>Salida: hoja de ruta técnica-comercial.</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- CRITERIO -->
+        <section id="criterio" class="section fit-section">
+            <div class="fit-layout">
+                <div class="fit-copy reveal-right">
+                    <span class="eyebrow">Criterio Electrosolar</span>
+                    <h2>No recomendamos paneles si antes no entendemos el consumo.</h2>
+                    <p>
+                        Si el problema está en demanda máxima, factor de potencia, motores, luminarias, contrato eléctrico
+                        o mala operación, vender paneles primero puede ser una mala decisión. La propuesta correcta sale
+                        del diagnóstico.
+                    </p>
+                </div>
+                <div class="fit-list reveal-right">
+                    <div><i class="fa-solid fa-check"></i><span>Sí trabajamos con empresas que quieren decidir con números.</span></div>
+                    <div><i class="fa-solid fa-check"></i><span>Sí revisamos consumo antes de dimensionar equipos.</span></div>
+                    <div><i class="fa-solid fa-xmark"></i><span>No vendemos soluciones genéricas sin leer la operación.</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <strong>Electrosolar Ingenieros</strong>
+            <p>Ingeniería energética, solar y soluciones off-grid en Cusco.</p>
+        </div>
+        <p>2026 Electrosolar Ingenieros. Todos los derechos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/51934724576?text=Hola,%20quiero%20reducir%20mi%20recibo%20de%20luz." class="floating-whatsapp" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js?v=5"></script>
+</body>
+</html>
