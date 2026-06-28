@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap');
+
 :root {
     --ink: #111820;
     --ink-soft: #26323f;
@@ -28,11 +30,16 @@ html {
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--ink);
-    background: var(--paper);
+    background: linear-gradient(180deg, var(--paper) 0%, #ece8df 100%);
+    background-attachment: fixed;
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .brand strong, .eyebrow, .stat-number, .panel-kicker, .hero-metrics strong {
+    font-family: 'Outfit', sans-serif;
 }
 
 a {
@@ -50,18 +57,21 @@ iframe {
     inset: 0 0 auto;
     z-index: 1000;
     color: var(--white);
-    background: rgba(17, 24, 32, 0.92);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background 0.25s ease, box-shadow 0.25s ease;
+    background: rgba(17, 24, 32, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .site-header.top {
-    background: linear-gradient(180deg, rgba(17, 24, 32, 0.96), rgba(17, 24, 32, 0.74));
+    background: linear-gradient(180deg, rgba(17, 24, 32, 0.90), rgba(17, 24, 32, 0.65));
 }
 
 .site-header.scrolled {
-    background: rgba(17, 24, 32, 0.98);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+    background: rgba(17, 24, 32, 0.88);
+    border-bottom: 1px solid rgba(215, 168, 63, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
 .header-contact,
@@ -228,7 +238,7 @@ iframe {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(17, 24, 32, 0.96), rgba(17, 24, 32, 0.82) 46%, rgba(23, 75, 122, 0.36)),
+        linear-gradient(135deg, rgba(43, 3, 16, 0.88) 0%, rgba(17, 24, 32, 0.94) 100%),
         linear-gradient(0deg, rgba(17, 24, 32, 0.62), rgba(17, 24, 32, 0.04) 58%);
 }
 
@@ -688,7 +698,10 @@ iframe {
     color: #dce5ea;
 }
 
-.section-light,
+.section-light {
+    background: linear-gradient(135deg, var(--white) 0%, #f4f6f8 100%);
+}
+
 .section-people,
 .scenario-section {
     background: var(--paper);
@@ -2067,7 +2080,8 @@ body::before {
 .evidence-card:hover,
 .team-member:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow);
+    border-color: var(--gold);
+    box-shadow: 0 20px 45px rgba(17, 24, 32, 0.12), 0 0 20px rgba(215, 168, 63, 0.1);
 }
 
 .service-card,
@@ -2079,7 +2093,25 @@ body::before {
 .audit-step,
 .evidence-card,
 .team-member {
-    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.service-card i,
+.product-card i,
+.use-card i,
+.scenario-card i,
+.deliverable-card i {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.service-card:hover i,
+.product-card:hover i,
+.use-card:hover i,
+.scenario-card:hover i,
+.deliverable-card:hover i {
+    transform: scale(1.15) rotate(3deg);
 }
 
 .team-panel {
