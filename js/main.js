@@ -89,8 +89,6 @@ const fallbackConfig = {
 
 let calculatorConfig = fallbackConfig;
 
-const calcUserType = document.getElementById('calcUserType');
-
 function updateLossEstimate() {
     if (!billAmount || !calcRegion || !calcUserType) return;
 
