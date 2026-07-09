@@ -97,6 +97,35 @@ iframe {
     gap: 10px;
 }
 
+.header-ref {
+    color: #ffd700;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-left: 2px;
+}
+
+.btn-como-llegar {
+    background: var(--gold);
+    color: var(--ink);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.74rem;
+    font-weight: 900;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-como-llegar:hover {
+    background: var(--white);
+    color: var(--ink);
+    transform: translateY(-1px);
+}
+
 .contact-links a {
     text-decoration: none;
     font-weight: 800;
@@ -231,7 +260,7 @@ iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(0) contrast(1.02) brightness(0.75);
+    filter: grayscale(0) contrast(1.02) brightness(0.84);
 }
 
 .hero-video.desktop-video {
@@ -246,8 +275,8 @@ iframe {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(135deg, rgba(43, 3, 16, 0.62) 0%, rgba(17, 24, 32, 0.78) 100%),
-        linear-gradient(0deg, rgba(17, 24, 32, 0.45), rgba(17, 24, 32, 0.02) 58%);
+        linear-gradient(135deg, rgba(43, 3, 16, 0.38) 0%, rgba(17, 24, 32, 0.58) 100%),
+        linear-gradient(0deg, rgba(17, 24, 32, 0.30), rgba(17, 24, 32, 0.01) 58%);
 }
 
 .hero-inner {
@@ -1874,6 +1903,17 @@ iframe {
 
 .contact-buttons a:hover {
     background: var(--wine);
+    transform: translateX(4px);
+}
+
+.contact-buttons a.btn-como-llegar-btn {
+    background: var(--gold);
+    color: var(--ink);
+}
+
+.contact-buttons a.btn-como-llegar-btn:hover {
+    background: var(--white);
+    color: var(--ink);
     transform: translateX(4px);
 }
 
