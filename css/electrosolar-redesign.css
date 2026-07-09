@@ -234,6 +234,14 @@ iframe {
     filter: grayscale(0.12) contrast(1.05) brightness(0.58);
 }
 
+.hero-video.desktop-video {
+    display: block;
+}
+
+.hero-video.mobile-video {
+    display: none;
+}
+
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -2779,6 +2787,12 @@ body::before {
 }
 
 @media (max-width: 768px) {
+    .hero-video.desktop-video {
+        display: none;
+    }
+    .hero-video.mobile-video {
+        display: block;
+    }
     .mision-vision-grid {
         grid-template-columns: 1fr;
     }

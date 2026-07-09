@@ -19,7 +19,7 @@ const entries = [
   "css/electrosolar-redesign.css",
   "images",
   "js/main.js",
-  "videos/video.webm"
+  "videos"
 ];
 
 await rm(dist, { recursive: true, force: true });
