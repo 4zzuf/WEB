@@ -2308,25 +2308,43 @@ body::before {
 
 @media (max-width: 1060px) {
     .site-header {
-        position: relative;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(17, 24, 32, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
     }
 
     .header-contact {
-        min-height: auto;
-        padding: 10px 0;
-        flex-direction: column;
-        text-align: center;
+        display: none; /* Ocultamos la barra de contacto en móvil para optimizar espacio */
     }
 
     .header-main {
-        min-height: auto;
-        padding: 15px 0;
+        min-height: 70px;
+        padding: 10px 0;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
     .brand {
         min-width: 0;
+        gap: 10px;
+    }
+
+    .brand-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .brand strong {
+        font-size: 0.95rem;
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    .brand small {
+        display: none; /* Ocultamos el subtítulo largo en móvil para evitar que se amontone */
     }
 
     .menu-toggle {
@@ -2340,6 +2358,8 @@ body::before {
         align-items: stretch;
         order: 5;
         background: rgba(17, 24, 32, 0.98);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 10px;
     }
 
     .main-nav.open {
@@ -2347,18 +2367,25 @@ body::before {
     }
 
     .main-nav a {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 16px 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
     }
 
-    .header-cta {
-        width: 100%;
-        order: 6;
+    .main-nav a:last-child {
+        border-bottom: none;
+    }
+
+    .header-main .header-cta {
+        display: none; /* Ocultamos el botón del header en móvil ya que el botón flotante de WhatsApp es principal */
     }
 
     .hero {
         min-height: auto;
-        padding: 86px 20px 84px;
+        padding: 40px 20px 60px;
     }
 
     .hero-inner,
@@ -2383,7 +2410,7 @@ body::before {
 
     .page-hero {
         min-height: auto;
-        padding: 86px 20px 74px;
+        padding: 40px 20px 50px;
     }
 
     .loss-panel {
@@ -2409,28 +2436,26 @@ body::before {
 }
 
 @media (max-width: 680px) {
-    .header-contact,
     .header-main,
     .route-strip {
         width: calc(100% - 28px);
     }
 
     .brand-logo {
-        width: 48px;
-        height: 48px;
+        width: 42px;
+        height: 42px;
     }
 
     .brand strong {
-        font-size: 0.84rem;
+        font-size: 0.9rem;
     }
 
     .brand small {
-        font-size: 0.72rem;
+        display: none;
     }
 
     .contact-links {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
     }
 
     .hero h1 {

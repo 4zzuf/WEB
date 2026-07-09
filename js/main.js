@@ -200,8 +200,13 @@ function updateLossEstimate() {
     }
 }
 
-// Intentar cargar la configuración en tiempo real desde el servidor de base de datos de la empresa
+// Intentar cargar la configuración en tiempo real desde el servidor de base de datos de la empresa (solo en desarrollo local)
 async function fetchCalculatorConfig() {
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    if (!isLocalhost) {
+        updateLossEstimate();
+        return;
+    }
     try {
         const response = await fetch('http://127.0.0.1:8000/api/public/calculator-config', {
             method: 'GET',
