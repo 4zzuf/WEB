@@ -2467,11 +2467,13 @@ body::before {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
+        line-height: 1.25;
     }
 
     .page-hero-copy h1 {
-        font-size: 2.55rem;
+        font-size: 2.15rem;
+        line-height: 1.25;
     }
 
     .hero-description {
@@ -2481,7 +2483,6 @@ body::before {
     .hero-actions,
     .page-hero-actions,
     .diagnostic-proof,
-    .range-grid,
     .hero-metrics,
     .route-strip,
     .enterprise-grid,
@@ -2494,6 +2495,11 @@ body::before {
     .team-grid,
     .scenario-grid {
         grid-template-columns: 1fr;
+    }
+
+    .range-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
     .quiz-grid {
